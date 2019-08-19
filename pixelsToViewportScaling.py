@@ -62,9 +62,9 @@ def pixelsToViewportScaling(filePath, viewportWidthOrHeight, dimensions, decimal
 
                                 # Convert *** to a float and divide it by window.innerWidth, round the result to 12 decimal places
                                 # and multiply by 100 to get the ratio as a number from 0 to 100.
-                                space_separated_substrings[substring_index] = str(
+                                space_separated_substrings[substring_index] = (str(
                                     round((float(value_of_substring) / viewport * 100), decimalPlacesRoundTo)
-                                    ) + viewportWidthOrHeight
+                                    ) + viewportWidthOrHeight)
 
                         # Check if we are converting to viewport height
                         elif viewportWidthOrHeight == 'vh':
@@ -77,9 +77,9 @@ def pixelsToViewportScaling(filePath, viewportWidthOrHeight, dimensions, decimal
 
                                 # Convert *** to a float and divide it by window.innerHeight, round the result to 12 decimal places
                                 # and multiply by 100 to get the ratio as a number from 0 to 100.
-                                space_separated_substrings[substring_index] = str(
+                                space_separated_substrings[substring_index] = (str(
                                     round((float(value_of_substring) / viewport * 100), decimalPlacesRoundTo)
-                                    ) + viewportWidthOrHeight
+                                    ) + viewportWidthOrHeight)
 
                     else:
                         # Prevents double semi-colon bug by removing all semi-colons and then appending a new one
